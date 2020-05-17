@@ -1,0 +1,37 @@
+<!--pages/report/report.wxml-->
+<view class="container">
+    <view class="title">计划资金折线图</view>
+    <canvas canvas-id="lineCanvas" disable-scroll="true" class="canvas" bindtouchstart="touchHandler"></canvas>
+    <!-- <button type="primary" bindtap="updateData">更新数据</button> -->
+  <view class="excel-view">
+    <scroll-view scroll-x="true" scroll-y="true" class='scrollClass'>
+      <view class="table">
+        <view class="tr bg-w">
+          <view class="th">活动时间</view>
+          <view class="th">创建人</view>
+          <view class="th ">活动标题</view>
+          <view class="th ">计划资金(元)</view>
+          <view class="th ">活动人数</view>
+        </view>
+        <block wx:for="{{listData}}" wx:key="{{item.activity.peoples}}">
+          <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+            <view class="td">{{item.activity.date}}</view>
+            <view class="td">{{item.creator}}</view>
+            <view class="td">{{item.activity.phrase2}}</view>
+            <view class="td">{{item.activity.fund}}</view>
+            <view class="td">{{item.activity.peoples}}</view>
+          </view>
+          <view class="tr" wx:else>
+            <view class="td">{{item.activity.date}}</view>
+            <view class="td">{{item.creator}}</view>
+            <view class="td">{{item.activity.phrase2}}</view>
+            <view class="td">{{item.activity.fund}}</view>
+            <view class="td">{{item.activity.peoples}}</view>
+          </view>
+        </block>
+      </view>
+    </scroll-view>
+    <button class='button1' bindtap="copyFileUrl" hover-class='hoverBtn'>导出表格</button>
+  </view>
+  <!-- <view wx:if="fileUrl">{{fileUrl}}</view> -->
+</view>

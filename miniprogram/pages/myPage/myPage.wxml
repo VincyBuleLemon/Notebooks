@@ -1,0 +1,50 @@
+<view>
+  <view wx:if="{{session}}" style='text-align:center; padding-top: 50%;'>
+    <text class='remind_font'>您还没有授权，请您授权登录</text>
+    <button class="weui-btn" style='width:80%;' type="primary" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" bindtap="onGetOpenid" style="background-color: #1c7df3;width:50%" lang='zh_CN'>登录</button>
+  </view>
+  <view class='all' wx:if="{{!session}}">
+    <view class='header'>
+      <image src='../../images/top.png' style='width:100%'></image>
+      <view class='userContent'>
+      <image src='{{avatarUrl}}' class='touxiang' mode="widthFix"></image>
+        <text style='font-size:50rpx;color:#666;margin-left:7%;' wx:if="{{!userInfo.nickName}}">{{nickName}}</text>
+        <text style='font-size:50rpx;color:#666;margin-left:7%;'>{{userInfo.nickName}}</text>
+        
+      </view>
+    </view>
+    <view class='page_body'>
+      <!-- <view class="weui-cells weui-cells_after-title">
+        <navigator url="../report/report" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <image src="../../images/report.png" style="width:100%">
+            <text>月度总结</text>
+          </image>
+        </navigator>
+        <navigator url="../mine/mine" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+          <view class="weui-cell__hd">
+            <image src="../../images/message.png" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+          </view>
+          <view class="weui-cell__bd">关于我的</view>
+        </navigator>
+      </view> -->
+      <view class="imgs-view">
+        <navigator class="imgs-item" url="../report/report">
+          <image src="../../images/report.png" mode="widthFix"></image>
+        </navigator>
+        <navigator class="imgs-item" url="../mine/mine">
+          <image src="../../images/mine.png" mode="widthFix"></image>
+        </navigator>
+      </view>
+      <view class="imgs-view">
+        <navigator class="imgs-item" url="">
+          <image src="../../images/other.png" mode="widthFix"></image>
+        </navigator>
+        <navigator class="imgs-item" url="">
+          <image src="../../images/other.png" mode="widthFix"></image>
+        </navigator>
+      </view>
+
+    </view>
+  </view>
+  <view class='cover' wx:if="{{click}}"></view>
+</view>

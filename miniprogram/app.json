@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/register/register",
+    "pages/myPage/myPage",
+    "pages/index/index",
+    "pages/schedule/schedule",
+    "pages/createTeam/createTeam",
+    "pages/createActivity/createActivity",
+    "pages/idDetails/idDetails",
+    "pages/actDetail/actDetail",
+    "pages/report/report",
+      "pages/mine/mine"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1c7df3",
+    "navigationBarTitleText": "Nice备忘录",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "backgroundColor": "#FFFFFF",
+    "selectedColor": "#000000",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/schedule/schedule",
+        "text": "Nice备忘录",
+        "iconPath": "images/schedule.png",
+        "selectedIconPath": "images/schedule_on.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index_on.png"
+      },
+      {
+        "pagePath": "pages/myPage/myPage",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my_on.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,21 @@
+<!--pages/register/register.wxml-->
+
+<view class="con-login">
+  <image src="../../images/bg.png" mode="widthFix"></image>
+  <view class="con-content">
+    <input class='input' placeholder='请输入账号' bind:change='inputName'></input>
+    <input class='input' placeholder='请输入密码' bind:change='inputPassword'></input>
+    <button class='button' type='primary' bindtap='register'>注册</button>
+    <view bindtap='login' class="q" bindtap='back'>去登录</view>
+  </view>
+  <!-- 用户 openid -->
+  <!-- <view class="userinfo">
+    <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="userinfo-avatar" style="background-image: url({{avatarUrl}})"></button>
+    <view>
+      <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
+    </view>
+  </view>
+  <view>
+    <text>{{userInfo.nickName}}</text>
+  </view> -->
+</view>

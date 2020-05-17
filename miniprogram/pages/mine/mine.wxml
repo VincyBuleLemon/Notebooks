@@ -1,0 +1,26 @@
+<!--pages/mine/mine.wxml-->
+<view class='box'>
+  <view class='bold'>基础使用教程</view>
+  <view class="text-con">
+    <view class="text">
+      <span>1</span> 创建者创建的也可自己加入</view>
+    <view class="text">
+      <span>2</span> 他人可见其他创建者创建的信息,但不可更改</view>
+    <view class="text">
+      <span>3</span> 订阅提醒只能提醒一次</view>
+    <view class="text">
+      <span>4</span> 导出excel时候要复制链接然后到浏览器下载excel表格</view>
+  </view>
+
+  <view class="container">
+    <!-- 分割线 -->
+    <view class="divLine"></view>
+  </view>
+</view>
+
+<button class='btn1' open-type='contact'>
+  <image class='btnImg' src='../../images/kefu.png'></image>
+  <view>联系客服</view>
+</button>
+<!-- <image class='img' src='{{imgUrl}}' bindtap='clickImg'></image> -->
+<!-- <image class='img_loading' src="../images/kefu.gif"></image> -->

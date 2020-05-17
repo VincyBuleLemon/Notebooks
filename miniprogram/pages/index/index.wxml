@@ -1,0 +1,93 @@
+<view class="page_bd" wx:if="{{logged}}">
+  <view class='noteam' wx:if="{{haveTeam && !exist}}">
+    <image src='../../images/expression.png' style='width:50%;' mode='widthFix'></image>
+    <text class='remind_font'>
+哎呀！你还没有加入任何团体，赶紧去加入团体查看活动吧
+      </text>
+    <button bindtap='createOrChooice' style='background-color: #1c7df3;color:white;height: 78rpx;line-height: 78rpx;' hover-class='hoverBtn'>加入/创建团体</button>
+  </view>
+  <view wx:if="{{!haveTeam && !exist}}">
+    <view class="weui-loadmore">
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">正在加载</view>
+    </view>
+  </view>
+  <view class='activities' wx:if="{{haveTeam && exist}}">
+    <view class='search-view'>
+      <input class='input' maxlength="30" bindinput="keyInput" placeholder='请输入活动名'></input>
+      <icon class="weui-icon-search_in-box" type="search" size="25"></icon>
+      <!-- <button class='search' bindtap="wxSearchFn" hover-class='button-hover'>搜索</button> -->
+    </view>
+    <scroll-view class='scroll'>
+      <block wx:for="{{activities}}" wx:key="{{item.activity.peoples}}">
+        <view class='external' data-id="{{index}}">
+          <!-- <view class='userUrl'>
+          <image src='{{item.creatorUrl}}' style="width:100%; border-radius: 10%;" mode='widthFix'></image>
+        </view> -->
+          <view bindtap='goDetail' data-id="{{index}}">
+            <view class='photoArea' wx:if="{{item.activity.file_path}}">
+              <block wx:for="{{item.activity.file_path}}" wx:key="{{item.activity.peoples}}">
+                <image src='{{item}}' class='userImages' mode='aspectFill' wx:if="{{index<3}}"></image>
+                <view style='width:1%;height:100%;display:inline-block;'></view>
+              </block>
+            </view>
+            <view class="mainArea">
+              <view class='userTitle'>活动标题：{{item.activity.phrase2}}</view>
+              <view class='userDate'>活动时间：{{item.activity.date}} {{item.activity.time1}}</view>
+              <view class='userClock'>活动经费：{{item.activity.fund}}</view>
+              <!-- <view class='userDes' style='font-size:small;'>活动描述：{{item.activity.introduction}}</view> -->
+              <view class='people small_font'>限人数：{{item.activity.peoples}}</view>
+            </view>
+          </view>
+          <view class='view_bottom'>
+            <button class="{{item.redDot}}" catchtap="onSubscribe" data-id="{{item}}" hover-class='hoverBtn'>编辑活动</button>
+            <!-- <button class='button1' catchtap='pay' hover-class='hoverBtn'>支付集资</button> -->
+            <button class='button1' bindtap="deleteItem" data-id="{{item}}" hover-class='hoverBtn'>删除活动</button>
+          </view>
+          <!-- <view class='view_bottom'>
+          <button class="{{item.redDot}}" catchtap='single' data-id="{{index}}" hover-class='hoverBtn'>编辑</button>
+          <button class='button1' hover-class='hoverBtn'>删除</button>
+        </view> -->
+        </view>
+      </block>
+    </scroll-view>
+    <view class='plus' hover-class='plus-around'>
+      <image src='../../images/plus+.png' mode='aspectFit' style='  width: 100rpx;  height: 100rpx;' bindtap='createActivity'></image>
+    </view>
+    <!-- 编辑遮罩层 -->
+    <view class="ruleZhezhao {{isRuleTrue?'isRuleShow':'isRuleHide'}}">
+      <view class='ruleZhezhaoContent'>
+        <view class='input-container'>
+           标题：<input data-value='{{item.activity.phrase2}}' bindinput='getphrase2' name="phrase2" value='{{inpVal}}' placeholder="" ></input>
+        </view>
+        <!-- <view class='input-container'>
+           时间：<input data-value='{{item.time1}}' bindinput='gettime1' name="time1" value='{{inp2Val}}'  placeholder=""></input>
+        </view> -->
+        <view class='input-container'>
+           经费：<input data-value='{{fund}}' bindinput='getfund'   name ="fund" value='{{inp3Val}}'  placeholder=""></input>
+        </view>
+        <view class='input-container'>
+          人数： <input data-value='{{peoples}}' bindinput='getpeoples'   name ="peoples" value='{{inp4Val}}'  placeholder=""></input>
+        </view>
+        <!-- <view class='comfirm'>
+           <button   form-type='submit'>保存</button>
+      </view> -->
+        <view class='view_bottom1'>
+          <button class="{{item.redDot}}" hover-class='hoverBtn' bindtap='updetMsg' data-id="{{id}}">确定</button>
+          <!-- <button class='button1' catchtap='pay' hover-class='hoverBtn'>支付集资</button> -->
+          <button class='button1' hover-class='hoverBtn' bindtap='hideRule'>取消</button>
+        </view>
+        <image src='/images/cha.png' class='ruleHide' bindtap='hideRule'></image>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="page_bd" wx:if="{{!logged}}">
+  <view class='noteam'>
+    <image src='../../images/expression.png' style='width:50%;' mode='widthFix'></image>
+    <text class='remind_font'>
+登录认证之后
+才能查看自己团体的活动哦
+      </text>
+  </view>
+</view>

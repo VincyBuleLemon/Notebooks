@@ -1,0 +1,47 @@
+/* pages/register/register.wxss */
+page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.con-login {
+  height: 100%;
+  position: relative;
+}
+
+image {
+  width: 100%;
+  position: absolute;
+}
+
+.con-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+input{
+  width: 303px;
+  height: 44px;
+  border-radius: 22.5px;
+  border: solid 1px #e2e2e2;
+  padding-left: 18rpx;
+  margin-bottom: 18rpx;
+}
+button{
+   width: 303px;
+  height: 44px;
+  border-radius: 22.5px;
+  background: linear-gradient(90deg, #6BADFD, #1F87FC);
+  box-shadow: 0px 2px4px rgba(62,149,234,0.5);
+  margin-top: 60rpx;
+}
+.q{
+  display: line-block;
+  text-align: center;
+  margin-top: 25rpx;
+}
+text{
+  text-align: center;
+}

@@ -1,0 +1,231 @@
+page{
+  background-color: rgb(241, 241, 241);
+}
+
+.activities {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+}
+
+.scroll {
+  background-color: rgb(241, 241, 241);
+}
+
+.external {
+  width: 90%;
+  /* height: 510rpx; */
+  border: 1px solid rgb(241, 241, 241);
+  position: relative;
+  border-radius: 10rpx;
+  margin-left: 5%;
+  margin-top: 25rpx;
+  margin-bottom: 25rpx;
+  background-color: white;
+  box-shadow: 0 1rpx 6rpx rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.userUrl {
+ width: 100%;
+ height: 200rpx;
+  /* display: inline-block; */
+
+}
+
+.activitys{
+  font-size: 30rpx;
+  padding: 10rpx 0 0 10rpx;
+  width: 50%;
+
+}
+.userTitle {
+  /* position: absolute;
+  left: 30%;
+  right: 4%;
+  top: 2%; */
+  font-size: 30rpx;
+  word-break: break-all; /*允许在单词内换行*/
+  text-align: left;
+  text-overflow: -o-ellipsis-lastline; /*css3中webkit内核提供的一个方法类似ellipsis*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box; /*自适应盒子*/
+  -webkit-line-clamp: 1; /*此处为1行,如果是两行就改成2*/
+  -webkit-box-orient: vertical;
+}
+
+.userDes {
+  /* position: absolute;
+  left: 8%;
+  right: 4%;
+  top: 45%; */
+  word-break: break-all; /*允许在单词内换行*/
+  text-align: left;
+  text-overflow: -o-ellipsis-lastline; /*css3中webkit内核提供的一个方法类似ellipsis*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box; /*自适应盒子*/
+  -webkit-line-clamp: 2; /*此处为1行,如果是两行就改成2*/
+  -webkit-box-orient: vertical;
+}
+
+.small_font {
+  font-size: small;
+  color: #bbb;
+}
+
+/* .userDate {
+  position: absolute;
+  left: 30%;
+  top: 25%;
+} */
+
+/* .userClock {
+  position: absolute;
+  left: 30%;
+  top: 34%;
+} */
+
+.people {
+  position: absolute;
+  bottom: 24%;
+  right: 12%;
+}
+
+.reverse {
+  position: absolute;
+  bottom: 24%;
+  left: 12%;
+}
+.view-main{
+  height: 340rpx;
+  display: flex;
+  padding: 10rpx 0 0 10rpx;
+}
+.view-image{
+  padding-left: 5rpx;
+  width: 30%;
+}
+.view_bottom {
+  position: absolute;
+  bottom: 2%;
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.comment-visiable {
+  width: 90%;
+  height: 400rpx;
+  margin-left: 5%;
+}
+
+.comment {
+  background-color: blue;
+  width: 90%;
+  height: 250rpx;
+  margin-left: 5%;
+  display: none;
+  position: relative;
+}
+
+.button {
+  font-size: 30rpx;
+  background-color: #1c7df3;
+  color: white;
+  line-height: 50rpx;
+  border: none;
+}
+.button1 {
+  font-size: 30rpx;
+  background-color: #1c7df3;
+  color: white;
+  line-height: 50rpx;
+  border: none;
+}
+
+.content {
+  background-color: rgb(241, 241, 241);
+  margin-bottom: 2%;
+  border-radius: 5rpx;
+}
+
+.small {
+  font-size: 30rpx;
+  color: black;
+}
+
+.scroll-view {
+  height: 400rpx;
+}
+
+.input_none {
+  line-height: 30rpx;
+  background-color: white;
+  border-bottom: 1rpx rgb(241, 241, 241) solid;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.hoverBtn {
+  position: relative;
+  top: 3rpx;
+  box-shadow: 0px 0px 8px rgb(241, 241, 241) inset;
+}
+
+.button::before {
+  content: '';
+  width: 0.5em;
+  height: 0.5em;
+  background-color: greenyellow;
+  border-radius: 50%;
+  border-width: thick;
+  position: absolute;
+  right: 0em;
+}
+
+
+.lesson {
+  background: white;
+  width: 660rpx;
+  margin: 30rpx;
+  border-radius: 10rpx;
+}
+
+.lesson-body {
+  padding: 0 30rpx;
+}
+
+.lesson-banner {
+  width: 100%;
+  height: 200rpx;
+}
+
+.lesson-desc {
+  margin: 16rpx;
+  width: 100%;
+}
+
+.lesson-label {
+  color: #999;
+}
+.noteam {
+  height: 60%;
+  width: 80%;
+  text-align: center;
+  position: absolute;
+   top: 34%;
+   left: 13%;
+}
+.remind_font {
+  color: #999999;
+  font-size: 40;
+}

@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="con-login">
+<view class="con-text">
+<text>欢迎来到</text>
+<text>Nice备忘录</text></view>
+  <image src="../../images/bg.png" mode="widthFix"></image>
+  <view class="con-content">
+    <input bind:change='inputName' maxlength="15" title="账号" placeholder="请输入账号" />
+    <input bind:change='inputPassword' maxlength="15" title="密码" placeholder="请输入密码" />
+    <view class="btn-bottom">
+      <button bindtap='login' type="primary">登录</button>
+      <button bindtap='register' type="primary">注册</button>
+    </view>
+
+  </view>
+  <!-- 用户 openid -->
+  <!-- <view class="userinfo">
+    <button open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="userinfo-avatar" style="background-image: url({{avatarUrl}})"></button>
+    <view>
+      <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
+    </view>
+  </view>
+  <view>
+    <text>{{userInfo.nickName}}</text>
+  </view> -->
+</view>
